@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatSD</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
+
+    <!-- FONT AWESOME -->
+    <script src="./css/fontawesome/js/all.js"></script>
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-warning">
+        <a href="/" class="navbar-brand mx-auto font-weight-light font-italic text-white">
+            Chat Sistemas Distribuidos
+        </a>
+    </nav>
+
+    <div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
+        <div class="card-header">
+            <h3>Introduza o seu Nome:</h3>
+        </div>
+        <p id="nickError"></p>
+        <div class="card-body">
+            <form id="nickForm">
+                <input type="text" id="nickname" class="form-control">
+                <input type="submit" value="Entrar no ChatSD" class="btn btn-warning btn-block mt-2">
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="contentWrap">
+
+        <div class="row mt-2">
+            <div class="col-md-4 pt-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Membros do chat:</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="usernames"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7 pt-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Grupo Sala</h4>
+                    </div>
+                    <div id="chat" class="card-body"></div>
+                    <form id="message-form" class="card-footer">
+                        <div class="input-group">
+                            <input type="text" id="message" class="form-control">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-warning">
+                                    <i class="fas fa-location-arrow"></i> Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer>
+    	<p class="text-white text-center m-5">
+    		&copy; 2020 Simão Moreno | Miniprojeto#2 Sistemas Distribuidos
+    	</p>
+    </footer>
+
+</body>
+
+<script src="./js/jquery.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./js/main.js"></script>
+
+</html>
